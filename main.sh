@@ -20,6 +20,6 @@ if [ $SSH_TTY ]; then
   PS1="$RED\u@\h $RED\w $LIGHTRED\$(current_git_branch)\$(git_special)$YELLOW\$(local_user)$LIGHTRED$ $NC"
   PS1="$PS1\[\e]0;\u@\h\a\]"
 else
-  PS1="$GREEN\u@\h $RED\w$NC $BROWN\$(current_git_branch)\$(git_special)$BROWN\n[\@]$RED \!$YELLOW\$(local_user)$GREEN$ $NC"
+  PS1="$GREEN\u@\h $RED\w$NC $BROWN\$(current_git_branch)\$(git_special)$BROWN\n[\@]$RED\!$YELLOW\$(local_user)$GREEN$ $NC"
   PS1="$PS1\[\e]0;\a\]"
 fi
