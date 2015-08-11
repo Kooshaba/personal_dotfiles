@@ -23,3 +23,6 @@ else
   PS1="$GREEN\u@\h $RED\w$NC $BROWN\$(current_git_branch)\$(git_special)$BROWN\n[\@]$RED\!$YELLOW\$(local_user)$GREEN$ $NC"
   PS1="$PS1\[\e]0;\a\]"
 fi
+
+history -c
+history -w
