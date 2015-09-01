@@ -18,6 +18,10 @@ alias h="history 40"
 alias p="psql"
 alias pdw="p data_warehouse_dev"
 
+alias pdate="date +'%d_%m_%Y'"
+alias date_folder="mkdir `pdate`"
+
+
 psgrep() { ps aux | grep $1 | grep -v grep; }
 killsophos() { psgrep sophos | awk '{print $2}' | xargs sudo kill -9; }
 watch() { while :; do clear; $1; sleep 2; done }
