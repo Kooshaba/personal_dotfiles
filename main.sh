@@ -7,7 +7,9 @@ else
 fi
 
 alias gitconfig="git config --edit"
-alias gca="git commit --amend --reset-author"
+alias gc="git commit"
+alias gca="gc --amend --reset-author"
+alias gcan="gca --no-edit"
 
 alias be="bundle exec"
 alias bashconfig="$EDITOR ~/workspace/personal_dotfiles/main.sh && reload"
@@ -45,5 +47,5 @@ show_colors() {
 
 alias matrix='LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
 
-PS1="$GREEN\u@\h $RED\w$NC $BROWN\$(current_git_branch)\$(git_special)$BROWN\n[\@]$RED\!$YELLOW\$(local_user)$GREEN ➤➤➤ $NC"
+PS1="$GREEN\u@\h $RED\w$NC $BROWN\$(current_git_branch)\$(git_special)$BROWN\n[\@]$RED\!$YELLOW\$(local_user)${GREEN}➤➤➤ $NC"
 PS1="$PS1\[\e]0;\a\]"
