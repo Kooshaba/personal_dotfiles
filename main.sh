@@ -47,5 +47,10 @@ show_colors() {
 
 alias matrix='LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
 
-PS1="$GREEN\u@\h $RED\w$NC $BROWN\$(current_git_branch)\$(git_special)$BROWN\n[\@]$RED\!$YELLOW\$(local_user)${GREEN}➤➤➤ $NC"
-PS1="$PS1\[\e]0;\a\]"
+if [ $SSH_TTY ]; then
+  PS1="$RED\u@\h $RED\w $LIGHTRED$ $NC"
+  PS1="$PS1\[\e]0;\u@\h\a\]"
+else
+  PS1="$GREEN\u@\h $RED\w$NC $BROWN\$(current_git_branch)\$(git_special)$BROWN\n[\@]$RED\!$YELLOW\$(local_user)${GREEN}➤➤➤ $NC"
+	PS1="$PS1\[\e]0;\a\]"
+fi
