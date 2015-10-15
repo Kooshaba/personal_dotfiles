@@ -10,6 +10,8 @@ alias gitconfig="git config --edit"
 alias gc="git commit"
 alias gca="gc --amend --reset-author"
 alias gcan="gca --no-edit"
+alias gpr="git pull --rebase"
+alias glh="gl | head"
 
 alias be="bundle exec"
 alias bashconfig="$EDITOR ~/workspace/personal_dotfiles/main.sh && reload"
@@ -25,6 +27,7 @@ alias date_folder="mkdir `pdate`"
 
 
 psgrep() { ps aux | grep $1 | grep -v grep; }
+pskill() { psgrep $1 | awk '{print $2}' | xargs sudo kill -9; }
 killsophos() { psgrep sophos | awk '{print $2}' | xargs sudo kill -9; }
 watch() { while :; do clear; $1; sleep 2; done }
 
