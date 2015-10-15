@@ -22,9 +22,11 @@ alias h="history 40"
 alias p="psql"
 alias pdw="p data_warehouse_dev"
 
-alias pdate="date +'%d_%m_%Y'"
+alias eurodate="date +'%d_%m_%Y'"
+alias pdate="date +'%Y_%m_%d'"
 alias date_folder="mkdir `pdate`"
 
+alias work="cd ~/workspace"
 
 psgrep() { ps aux | grep $1 | grep -v grep; }
 pskill() { psgrep $1 | awk '{print $2}' | xargs sudo kill -9; }
