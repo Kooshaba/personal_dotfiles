@@ -12,6 +12,7 @@ alias gca="gc --amend --reset-author"
 alias gcan="gca --no-edit"
 alias gpr="git pull --rebase"
 alias glh="gl | head"
+alias gd="git diff --color | diff-highlight | diff-so-fancy"
 
 alias be="bundle exec"
 alias bashconfig="$EDITOR ~/workspace/personal_dotfiles/main.sh && reload"
@@ -27,6 +28,7 @@ alias pdate="date +'%Y_%m_%d'"
 alias date_folder="mkdir `pdate`"
 
 alias work="cd ~/workspace"
+alias sh="cd ~/workspace/tv"
 
 psgrep() { ps aux | grep $1 | grep -v grep; }
 pskill() { psgrep $1 | awk '{print $2}' | xargs sudo kill -9; }
