@@ -30,9 +30,11 @@ alias date_folder="mkdir `pdate`"
 alias work="cd ~/workspace"
 alias sh="cd ~/workspace/tv"
 
+alias ssh="~/workspace/personal_dotfiles/ssh-host-color"
+alias grep="grep --color=auto"
+
 psgrep() { ps aux | grep $1 | grep -v grep; }
 pskill() { psgrep $1 | awk '{print $2}' | xargs sudo kill -9; }
-killsophos() { psgrep sophos | awk '{print $2}' | xargs sudo kill -9; }
 watch() { while :; do clear; $1; sleep 2; done }
 
 alias matrix='LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
