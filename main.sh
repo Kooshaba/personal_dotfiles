@@ -12,7 +12,6 @@ alias gca="gc --amend --reset-author"
 alias gcan="gca --no-edit"
 alias gpr="git pull --rebase"
 alias glh="gl | head"
-alias gd="git diff --color | diff-highlight | diff-so-fancy"
 
 alias be="bundle exec"
 alias bashconfig="$EDITOR ~/workspace/personal_dotfiles/main.sh && reload"
