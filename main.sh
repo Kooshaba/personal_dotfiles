@@ -27,7 +27,6 @@ alias pdate="date +'%Y_%m_%d'"
 alias date_folder="mkdir `pdate`"
 
 alias work="cd ~/workspace"
-alias sh="cd ~/workspace/tv"
 
 alias ssh="~/workspace/personal_dotfiles/ssh-host-color"
 alias grep="grep --color=auto"
