@@ -1,11 +1,5 @@
 #!/bin/bash
 
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='subl -w'
-fi
-
 alias gitconfig="git config --edit"
 alias gc="git commit"
 alias gca="gc --amend --reset-author"
