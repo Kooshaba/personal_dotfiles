@@ -7,6 +7,17 @@ alias gcan="gca --no-edit"
 alias gpr="git pull --rebase"
 alias glh="gl | head"
 
+alias dc="docker-compose"
+alias d="docker"
+
+dnuke() { docker rm $(docker ps -a -q); }
+dnukei() { docker rmi $(docker images | grep 'none>' | awk '{print $3}'); }
+dbash() { docker run -it $1 /bin/bash; }
+
+alias hc="hyper compose"
+alias hcrun="hyper compose run -f docker-compose.hyper.yml"
+hnuke() { hyper rm $(hyper ps -a -q);  }
+
 alias be="bundle exec"
 alias bashconfig="$EDITOR ~/workspace/personal_dotfiles/main.sh && reload"
 alias cpkey="pbcopy < ~/.ssh/id_rsa.pub"
@@ -28,6 +39,8 @@ alias grep="grep --color=auto"
 psgrep() { ps aux | grep $1 | grep -v grep; }
 pskill() { psgrep $1 | awk '{print $2}' | xargs sudo kill -9; }
 watch() { while :; do clear; $1; sleep 2; done }
+
+alias hl='hyperlayout'
 
 alias matrix='LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
 
