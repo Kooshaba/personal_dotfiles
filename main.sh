@@ -15,6 +15,7 @@ alias glh="gl | head"
 
 alias dc="docker-compose"
 alias d="docker"
+alias dlogs="tail -f ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/log/docker.log"
 
 dnuke() { docker rm $(docker ps -a -q); }
 dnukei() { docker rmi $(docker images | grep 'none>' | awk '{print $3}'); }
