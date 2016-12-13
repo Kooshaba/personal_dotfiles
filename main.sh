@@ -15,7 +15,7 @@ dnukei() { docker rmi $(docker images | grep 'none>' | awk '{print $3}'); }
 dbash() { docker run -it $1 /bin/bash; }
 
 alias hc="hyper compose"
-alias hcrun="hyper compose run -f docker-compose.hyper.yml"
+alias hcrun="hyper compose run -f hyper-compose.yml --rm"
 hnuke() { hyper rm $(hyper ps -a -q);  }
 
 alias be="bundle exec"
